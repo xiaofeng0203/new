@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../public/css/style-3193e7107b.css">
+    <link rel="stylesheet" href="../public/css/style-919800deae.css">
     <script src="../public/js/jquery-b98661369a.js"></script>
     <script src="../public/js/velocity-db5c753c2b.js"></script>
     <script src="../public/js/velocity-f55d22cc59.ui.js"></script>
@@ -70,7 +70,6 @@
             if(percent == 100){
                 $('.loading').hide();
                 $('.home').show();
-                $('.home div').hide();
                 $('.home .title').velocity('transition.bounceDownIn',{
                     complete:function(){
                         $('.subtitle').velocity('callout.flash',{display: "block",complete:function(){
@@ -78,7 +77,6 @@
                                      complete:function(){
                                         $('.hand-wrap').velocity('fadeIn');//手的淡入淡出
                                          $('.hand-avatar').show();
-                                         $('.hand').show();
                                          Shake.start();
                                          window.addEventListener('click',function(){
                                              $('.home').hide();

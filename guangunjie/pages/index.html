@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <script src="../public/js/jquery.js"></script>
+    <script src="../public/js/velocity.js"></script>
+    <script src="../public/js/velocity.ui.js"></script>
+    <script src="../public/js/shake.js"></script>
+    <title>光棍节</title>
+</head>
+<body>
+    <div class="loading">
+        <div class="wrap">
+            <canvas id="can1" width="146px" height="146px"></canvas>
+            <img class="loading-pic" src="../public/img/loading.png" alt="">
+            <p class="text">0%</p>
+        </div>
+    </div>
+    <div class="home">
+        <div class="title"></div>
+        <div class="subtitle"></div>
+        <div class="entitle"></div>
+        <div class="hand-wrap">
+            <div class="home-avatar"></div>
+            <div class="hand"></div>
+        </div>
+    </div>
+    <div class="result" style="display: none">
+        <div class="title"></div>
+        <div class="answer">
+            <img src="../public/img/result_answer-b52317bd87.png" alt="">
+        </div>
+        <div class="avatar-wrap">
+            <div class="avatar-bg"></div>
+            <div class="avatar"></div>
+        </div>
+        <div class="shake-tip"></div>
+        <div class="btn"></div>
+        
+    </div>   
+</body>
+<script>
+
+    function arc(percent){
+        var canvas = document.getElementById('can1');
+        var context =canvas.getContext('2d');
+        context.beginPath();
+        context.moveTo(73, 73);
+        context.arc(73,73,73,-0.5*Math.PI,-0.5*Math.PI + (2*Math.PI)*percent/100,false);
+        context.closePath();
+        context.fillStyle='#ffa9ad';
+        context.fill();
+    }
+    var pics =["../public/img/entitle.png","../public/img/hand.png","../public/img/hand_finger.png","../public/img/home_avatar0.png","../public/img/home_avatar1.png","../public/img/home_avatar2.png","../public/img/home_avatar3.png","../public/img/home_avatar4.png","../public/img/home_avatar5.png","../public/img/home_avatar6.png","../public/img/home_shake_text.png","../public/img/loading.png","../public/img/result_answer.png","../public/img/result_answer0.png","../public/img/result_answer1.png","../public/img/result_answer2.png","../public/img/result_answer3.png","../public/img/result_answer4.png","../public/img/result_answer6.png","../public/img/result_avatar.png","../public/img/result_avatar_bg.png","../public/img/result_avatar_bg_1.png","../public/img/result_avatar_bg_2.png","../public/img/result_avatar0.png","../public/img/result_avatar1.png","../public/img/result_avatar2.png","../public/img/result_avatar3.png","../public/img/result_avatar4.png","../public/img/result_avatar6.png","../public/img/result_btn.png","../public/img/result_text.png","../public/img/result_text0.png","../public/img/result_text1.png","../public/img/result_text2.png","../public/img/result_text3.png","../public/img/result_text4.png","../public/img/result_text6.png","../public/img/result_title.png","../public/img/shake_tips.png","../public/img/share.jpg","../public/img/share.png","../public/img/share0.jpg","../public/img/share1.jpg","../public/img/share2.jpg","../public/img/share3.jpg","../public/img/share4.jpg","../public/img/share5.jpg","../public/img/share6.jpg","../public/img/subtitle.png","../public/img/title.png","../public/img/yue.png"];
+    
+    var pics_length=pics.length;
+    var index = 0;
+    
+    for(var i=0; i<pics.length; i++){
+        var Img = new Image();
+        Img.src = pics[i];
+        Img.onload = function(){
+            index++;
+            percent = parseInt(index/pics_length*100);
+            arc(percent);
+            $('.loading .wrap .text').text(percent + '%');
+            if(percent == 100){
+                $('.loading').hide();
+                $('.home').show();
+                $('.home div').hide();
+                $('.home .title').velocity('transition.bounceDownIn',{
+                    complete:function(){
+                        $('.subtitle').velocity('callout.flash',{display: "block",complete:function(){
+                                 $('.home .entitle').velocity('transition.perspectiveDownIn',{
+                                     complete:function(){
+                                        $('.hand-wrap').velocity('fadeIn');//手的淡入淡出
+                                         $('.hand-avatar').show();
+                                         $('.hand').show();
+                                         Shake.start();
+                                         window.addEventListener('click',function(){
+                                             $('.home').hide();
+                                             $('.result').show();
+//                                             $('.avatar-wrap').removeAttr("style");
+                                             $('.avatar-wrap').velocity('transition.slideDownIn').velocity({'rotateY':'0'}).velocity({'rotateY':'900deg'},{
+                                                 duration:1000,complete:function(){
+                                                     $('.avatar-bg').velocity('transition.expandOut',{
+                                                         complete:function(){
+                                                             $('.avatar').velocity('transition.expandIn',{
+                                                                 display:'block',
+                                                                 complete:function(){
+                                                                     $('.answer').velocity('transition.bounceIn',{
+                                                                         duration:2000
+                                                                     });
+                                                                 }
+                                                             });
+                                                         }
+                                                     })
+                                                 }
+                                             })
+                                         })
+                                         
+                                     }
+                                 })
+                            }
+                        })
+                    }
+                });
+            }
+        }
+    }
+</script>
+</html>

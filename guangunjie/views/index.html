@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../public/css/style-45d07e84eb.css">
-    <script src="../public/js/jquery-b98661369a.js"></script>
-    <script src="../public/js/velocity-db5c753c2b.js"></script>
-    <script src="../public/js/velocity-f55d22cc59.ui.js"></script>
-    <script src="../public/js/shake-c049b18112.js"></script>
+    <link rel="stylesheet" href="../public/css/style-6a000ca33c.css">
+    <script src="../public/js/jquery-69f7f7005f.js"></script>
+    <script src="../public/js/velocity-e4911a8859.js"></script>
+    <script src="../public/js/velocity-b8ab417484.ui.js"></script>
+    <script src="../public/js/shake-98672d3ab0.js"></script>
     <title>光棍节</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
             <div class="hand"></div>
         </div>
     </div>
-    <div class="result" style="display: none">
+    <div class="result">
         <div class="title"></div>
         <div class="answer">
             <img src="../public/img/result_answer-b52317bd87.png" alt="">
@@ -81,19 +81,16 @@
                                          Shake.start();
                                          window.addEventListener('click',function(){
                                              $('.home').hide();
-                                             $('.result').css({'style':'none'})
                                              $('.result').show();
-                                        $('.avatar-wrap').removeAttr("style");
-                                                 $('.avatar-wrap').velocity('transition.slideDownIn').velocity({'rotateY':'1800deg'},{complete:function(){
+                                             $('.avatar-wrap').velocity('stop',true).velocity({rotateY:'0deg'},{duration:1});
+                                             $('.avatar-bg').velocity('stop');
+                        
+                                                 $('.avatar-wrap').velocity('transition.slideDownIn').velocity({'rotateY':'1800deg'},{
+                                                     duration:2000,complete:function(){
                                                          $('.avatar-bg').velocity('transition.expandOut',{
                                                              complete:function(){
-                                                                 $('.avatar').velocity('transition.expandIn',{
-                                                                     display:'block',complete:function(){
-                                                                         $('.answer').velocity('transition.bounceIn',{
-                                                                             duration:2000
-                                                                         });
-                                                                     }
-                                                                 });
+                                                                 $('.avatar').velocity('transition.expandIn');
+                                                                 $('.answer').velocity('transition.bounceIn');
                                                              }
                                                          })
                                                      }
@@ -106,8 +103,6 @@
                         })
                     }
                 })
-//            })
-                
             }
         }
     }

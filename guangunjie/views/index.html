@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../public/css/style-6a000ca33c.css">
+    <link rel="stylesheet" href="../public/css/style-6c1e46e2bd.css">
     <script src="../public/js/jquery-69f7f7005f.js"></script>
     <script src="../public/js/velocity-e4911a8859.js"></script>
     <script src="../public/js/velocity-b8ab417484.ui.js"></script>
-    <script src="../public/js/shake-98672d3ab0.js"></script>
+    <script src="../public/js/shake-9d03aeec29.js"></script>
     <title>光棍节</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
     <div class="result">
         <div class="title"></div>
         <div class="answer">
-            <img src="../public/img/result_answer-b52317bd87.png" alt="">
+<!--            <img src="../public/img/result_answer-b52317bd87.png" alt="">-->
         </div>
         <div class="avatar-wrap">
             <div class="avatar-bg"></div>
@@ -56,7 +56,9 @@
     }
     var pics =["../public/img/entitle-f10fc046b6.png","../public/img/hand-2c59a2eaab.png","../public/img/hand_finger-5697478078.png","../public/img/home_avatar0-4ba3f708ed.png","../public/img/home_avatar1-6e666c9f41.png","../public/img/home_avatar2-5d0d345aaf.png","../public/img/home_avatar3-17bb90a561.png","../public/img/home_avatar4-7027c27901.png","../public/img/home_avatar5-a8e40c45e8.png","../public/img/home_avatar6-11ed7b04b1.png","../public/img/home_shake_text-aa64951385.png","../public/img/loading-9e89d30682.png","../public/img/result_answer-b52317bd87.png","../public/img/result_answer0-c539ee6f78.png","../public/img/result_answer1-92801f242b.png","../public/img/result_answer2-4f31d6da3a.png","../public/img/result_answer3-22d41cb206.png","../public/img/result_answer4-10bd2d35b0.png","../public/img/result_answer6-bd885f91c6.png","../public/img/result_avatar-ebfefec7a2.png","../public/img/result_avatar_bg-d0892caaf2.png","../public/img/result_avatar_bg_1-847ddaa2c3.png","../public/img/result_avatar_bg_2-90e90a78e9.png","../public/img/result_avatar0-1e942c39c1.png","../public/img/result_avatar1-83b3aa332b.png","../public/img/result_avatar2-7132294a00.png","../public/img/result_avatar3-e321ec836b.png","../public/img/result_avatar4-b3d0413186.png","../public/img/result_avatar6-cff2ea8165.png","../public/img/result_btn-8ad12b43c0.png","../public/img/result_text-0a624175ab.png","../public/img/result_text0-fbcc663fb7.png","../public/img/result_text1-ee916b72f3.png","../public/img/result_text2-26fa528e22.png","../public/img/result_text3-fa712f4662.png","../public/img/result_text4-a37e3e4056.png","../public/img/result_text6-dd725fa99d.png","../public/img/result_title-62d28eb73c.png","../public/img/shake_tips-8a9b58ae51.png","../public/img/share-ed4b816471.jpg","../public/img/share-f36a9de4a3.png","../public/img/share0-c7f3af2a70.jpg","../public/img/share1-6e2318cb3f.jpg","../public/img/share2-4adf50f0a7.jpg","../public/img/share3-43f470bb09.jpg","../public/img/share4-8e2b600eb6.jpg","../public/img/share5-16eb2956b7.jpg","../public/img/share6-16447787c7.jpg","../public/img/subtitle-85e25c70f3.png","../public/img/title-33f49f72e7.png","../public/img/yue-0321419d01.png"];
     
-    var aImg = ["../public/img/home_avatar0-4ba3f708ed.png","../public/img/home_avatar1-6e666c9f41.png","../public/img/home_avatar2-5d0d345aaf.png","../public/img/home_avatar3-17bb90a561.png","../public/img/home_avatar4-7027c27901.png","../public/img/home_avatar5-a8e40c45e8.png","../public/img/home_avatar6-11ed7b04b1.png"]
+    var aImg = ["../public/img/home_avatar0-4ba3f708ed.png","../public/img/home_avatar1-6e666c9f41.png","../public/img/home_avatar2-5d0d345aaf.png","../public/img/home_avatar3-17bb90a561.png","../public/img/home_avatar4-7027c27901.png","../public/img/home_avatar5-a8e40c45e8.png","../public/img/home_avatar6-11ed7b04b1.png"];
+    var aImg1 = ["../public/img/result_avatar-ebfefec7a2.png","../public/img/result_avatar0-1e942c39c1.png","../public/img/result_avatar1-83b3aa332b.png","../public/img/result_avatar2-7132294a00.png","../public/img/result_avatar3-e321ec836b.png","../public/img/result_avatar4-b3d0413186.png","../public/img/result_avatar6-cff2ea8165.png"];
+    var aImg2=["../public/img/result_answer-b52317bd87.png","../public/img/result_answer0-c539ee6f78.png","../public/img/result_answer1-92801f242b.png","../public/img/result_answer2-4f31d6da3a.png","../public/img/result_answer3-22d41cb206.png","../public/img/result_answer4-10bd2d35b0.png","../public/img/result_answer6-bd885f91c6.png"];
     
     var pics_length=pics.length;
     var index = 0;
@@ -71,7 +73,6 @@
         $('.home-avatar').css({'background':'url("'+aImg[num]+'") no-repeat 0 0 /cover'})
     }
      
-    
     
     
     for(var i=0; i<pics.length; i++){
@@ -97,19 +98,32 @@
                                          $('.hand-wrap').velocity('fadeIn',{display:'block'});//手的淡入淡出
                                          timer=setInterval(showImg,150);
                                          Shake.start();
-                                         window.addEventListener('click',function(){                                            
+                                         window.addEventListener('Shake',function(){
+                                             var random = parseInt(Math.random()*10)%aImg1.length;
+                                             
+                                             
                                              $('.home').hide();
+                                            
                                              clearInterval(timer);
+                                              //清除动画;
+                                             $('.answer').removeAttr("style").css({'background':''});
+                                             $('.avatar-wrap').removeAttr("style");
+                                             $('.avatar-bg').removeAttr("style");
+                                             $('.avatar').removeAttr("style");
+   
                                              $('.result').show();
+                                            
+                                            
                                              $('.avatar-wrap').velocity('stop',true).velocity({rotateY:'0deg'},{duration:1});
-                                             $('.avatar-bg').velocity('stop');
-                        
                                                  $('.avatar-wrap').velocity('transition.slideDownIn').velocity({'rotateY':'1800deg'},{
                                                      duration:2000,complete:function(){
                                                          $('.avatar-bg').velocity('transition.expandOut',{
                                                              complete:function(){
-                                                                 $('.avatar').velocity('transition.expandIn');
-                                                                 $('.answer').velocity('transition.bounceIn');
+                                                                 $('.avatar').velocity('transition.expandIn').css({
+                                                                     'background':'url("'+aImg1[random]+'") no-repeat 0 0 /cover'});
+                                                                 $('.answer').velocity('transition.bounceIn').css({
+                                                                     'background':'url("'+aImg2[random]+'") no-repeat 0 0 /contain'
+                                                                 });
                                                              }
                                                          })
                                                      }

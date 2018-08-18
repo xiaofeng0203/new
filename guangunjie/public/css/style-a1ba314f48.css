@@ -95,12 +95,20 @@ html,body{
         left:8.13vw;
         background:url(../img/entitle-f10fc046b6.png) no-repeat 0 0 /cover;
     }
+.home .home-shake{
+        width:20vw;
+        height:11.88vw;
+        position:absolute;
+        top:62.5vw;
+        right:9.38vw;
+        background:url(../img/home_shake_text-aa64951385.png) no-repeat 0 0 /cover;
+    }
 .home .hand-wrap{
         display:none;
         width:95.47vw;
         height:117.03vw;
         position:absolute;
-        left:0;
+        left:-1.56vw;
         bottom:-7.81vw;
         transform-origin: 35% 85%;
         transform: rotate(0deg);
@@ -141,7 +149,7 @@ html,body{
 .result .answer{
         display:none;
         width:82.66vw;
-        height:10vw;
+        height:16.41vw;
         margin:3.13vw auto 0 auto;
     }
 .result .answer img{
@@ -200,8 +208,3 @@ html,body{
         margin-left:-32.81vw;
         background:url(../img/result_btn-8ad12b43c0.png) no-repeat 0 0 /cover;
     }
-
-
-
-
-

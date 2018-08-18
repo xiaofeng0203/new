@@ -117,7 +117,7 @@
          this.lastZ = current.z;
 
      };
-
+    
      //event handler
      Shake.prototype.handleEvent = function (e) {
          if (typeof (this[e.type]) === 'function') {
@@ -125,7 +125,7 @@
          }
      };
 
-   
+//   
 //    var Shake = {
 //        start:function(){
 //            window.addEventListener('click',Shake,false);
@@ -135,7 +135,7 @@
 //            dispatchEvent(shakeevent)
 //        }
 //    }
-
-    
-//    return Shake;
+//
+//
+    return Shake;
 }));

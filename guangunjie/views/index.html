@@ -8,7 +8,7 @@
     <script src="../public/js/jquery-69f7f7005f.js"></script>
     <script src="../public/js/velocity-e4911a8859.js"></script>
     <script src="../public/js/velocity-b8ab417484.ui.js"></script>
-    <script src="../public/js/shake-9d03aeec29.js"></script>
+    <script src="../public/js/shake-ed6ba3b734.js"></script>
     <title>光棍节</title>
 </head>
 <body>
@@ -97,8 +97,9 @@
                                      complete:function(){
                                          $('.hand-wrap').velocity('fadeIn',{display:'block'});//手的淡入淡出
                                          timer=setInterval(showImg,150);
-                                         Shake.start();
-                                         window.addEventListener('Shake',function(){
+                                         var shake = new Shake();
+                                         shake.start();
+                                         window.addEventListener('shake',function(){
                                              var random = parseInt(Math.random()*10)%aImg1.length;
                                              
                                              

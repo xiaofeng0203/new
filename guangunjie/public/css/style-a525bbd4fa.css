@@ -187,6 +187,17 @@ html,body{
             margin-left:-23.44vw;
             background:url(../img/result_avatar6-cff2ea8165.png) no-repeat 0 0 /cover;
         }
+.result .yue{
+        display:none;
+        width:24.38vw;
+        height:10.78vw;
+        position:absolute;
+        top:84.38vw;
+        left:0;
+        right:0;
+        margin:0 auto;
+        background:url(../img/yue-0321419d01.png) no-repeat 0 0 /cover;
+    }
 .result .shake-tip{
         width:18.44vw;
         height:21.88vw;
@@ -208,3 +219,20 @@ html,body{
         margin-left:-32.81vw;
         background:url(../img/result_btn-8ad12b43c0.png) no-repeat 0 0 /cover;
     }
+.result .share{
+        display:none;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:rgba(0,0,0,.5);
+    }
+.result .share .share-title{
+            width:39.22vw;
+            height:34.38vw;
+            position:absolute;
+            top:3.13vw;
+            right:0;
+            background:url(../img/share-f36a9de4a3.png) no-repeat 0 0 /cover;
+        }

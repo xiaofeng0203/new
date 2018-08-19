@@ -8,7 +8,7 @@
     <script src="../public/js/jquery-69f7f7005f.js"></script>
     <script src="../public/js/velocity-e4911a8859.js"></script>
     <script src="../public/js/velocity-b8ab417484.ui.js"></script>
-    <script src="../public/js/shake-77a2340c08.js"></script>
+    <script src="../public/js/shake-569f71c660.js"></script>
     <title>光棍节</title>
 </head>
 <body>
@@ -88,12 +88,11 @@
             
             var percent = parseInt(index/pics_length*100);
             arc(percent);
-  
 
             if(percent == 100){
                 $('.loading').hide();
                 $('.home').show();
-                
+ 
                     $('.home .title').velocity('transition.bounceDownIn',{
                     complete:function(){
                         $('.subtitle').velocity('callout.flash',{display:'block',

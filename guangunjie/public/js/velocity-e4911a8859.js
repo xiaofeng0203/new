@@ -10,7 +10,7 @@
 /* These shimmed functions are only used if jQuery isn't present. If both this shim and jQuery are loaded, Velocity defaults to jQuery proper. */
 /* Browser support: Using this shim instead of jQuery proper removes support for IE8. */
 
-;(function (window) {
+(function (window) {
     /***************
          Setup
     ***************/
